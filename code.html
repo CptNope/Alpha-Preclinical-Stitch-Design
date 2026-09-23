@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-fixed-dim":"#ffb77d","tertiary-container":"#753d00","primary-fixed-dim":"#b0c6ff","surface-tint":"#2b5bb5","secondary-container":"#6ae1ff","on-primary":"#ffffff","on-error":"#ffffff","surface-container-lowest":"#ffffff","error":"#ba1a1a","outline":"#737783","tertiary-fixed":"#ffdcc3","surface-dim":"#cfdaf2","on-tertiary-container":"#ffa85e","secondary-fixed-dim":"#5dd6f3","background":"#f9f9ff","surface-container-highest":"#d8e3fb","on-secondary-fixed":"#001f26","surface-container-high":"#dee8ff","error-container":"#ffdad6","inverse-surface":"#263143","on-secondary-fixed-variant":"#004e5d","on-error-container":"#93000a","surface-container-low":"#f0f3ff","outline-variant":"#c3c6d4","primary-fixed":"#d9e2ff","inverse-primary":"#b0c6ff","on-primary-container":"#a1bbff","on-tertiary-fixed-variant":"#6e3900","on-tertiary-fixed":"#2f1500","secondary-fixed":"#adecff","on-tertiary":"#ffffff","on-secondary":"#ffffff","inverse-on-surface":"#ecf1ff","surface-bright":"#f9f9ff","surface-variant":"#d8e3fb","secondary":"#00687a","primary":"#003178","primary-container":"#0d47a1","surface-container":"#e7eeff","on-background":"#111c2d","surface":"#f9f9ff","on-surface":"#111c2d","tertiary":"#542a00","on-primary-fixed-variant":"#00429c","on-surface-variant":"#434652","on-secondary-container":"#006374","on-primary-fixed":"#001945"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-2xl":"4rem","margin-mobile":"1.25rem","space-xl":"2.5rem","space-xs":"0.25rem","margin":"3rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","space-md":"1rem"},"fontFamily":{"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"micro-label":["JetBrains Mono"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"caption":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"display-hero":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"mono-metric":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"]},"fontSize":{"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"micro-label":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"caption":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"30px","letterSpacing":"-0.005em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"mono-metric":["20px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1360px] mx-auto px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Image from https://static.wixstatic.com/media/095141_640069041d5745f683bfee75e98a2496~mv2.png/v1/fill/w_85,h_79,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/alpha%20logo%20white-06.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XVTGXrnwzbTVttXjyN78Iix9sSkygkm131OppEpNG3Fog2TZtMAko52SB45KIWGREavD3eBWooBXX_7R-KyMQSegnXQfTVPgQ70aPfwE3dCaGLfkdclN2SCwWo8ZIrTMH9dGqkOdajQVDTo26-BwDQGYuAW4U9xi7A8IW7sKsXxXbGCd6v2Xna26j70xivQBAVKUfBpXNpFOPDxH_U_fO90CirmlE80Bas5r5UomLmBhaP22j9GW5EXW7I"/><a class="flex flex-col" data-path="home" href="#"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">ALPHA PRECLINICAL</span><span class="font-micro-label text-micro-label text-outline uppercase tracking-wider">PRECLINICAL RESEARCH • WORCESTER, MA</span></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-headline-sm"><div class="relative group flex items-center"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-1" data-path="capabilities" href="#">Capabilities<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></a><div class="absolute top-full left-0 hidden group-hover:flex flex-col w-64 bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(11,19,32,0.06)] rounded-lg p-space-sm mt-1 z-50"><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="in-vivo-research" href="#">In Vivo Research</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="pk-pd-studies" href="#">PK/PD Studies</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="ivis-optical-imaging" href="#">IVIS Imaging</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="colony-management" href="#">Colony Management</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="surgical-services" href="#">Surgical Services</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="in-vitro-laboratory-services" href="#">In Vitro Laboratory Services</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="custom-study-design" href="#">Custom Study Design</a></div></div><div class="relative group flex items-center"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-1" data-path="therapeutic-expertise" href="#">Therapeutic Expertise<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></a><div class="absolute top-full left-0 hidden group-hover:flex flex-col w-64 bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(11,19,32,0.06)] rounded-lg p-space-sm mt-1 z-50"><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="gene-therapy-rna" href="#">Gene Therapy &amp; RNA</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="autoimmune-disease" href="#">Autoimmune Disease</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="metabolic-disease" href="#">Metabolic Disease</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="inflammation-fibrosis" href="#">Inflammation &amp; Fibrosis</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="oncology-tumor-models" href="#">Oncology / Tumor Models</a></div></div><div class="relative group flex items-center"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2 flex items-center gap-1" data-path="about" href="#">About<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></a><div class="absolute top-full left-0 hidden group-hover:flex flex-col w-60 bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(11,19,32,0.06)] rounded-lg p-space-sm mt-1 z-50"><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="our-story" href="#">Our Story</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="scientific-leadership" href="#">Scientific Leadership</a><a class="px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-DEFAULT transition-colors" data-path="worcester-facility-iacuc-standards" href="#">Worcester Facility &amp; IACUC</a></div></div><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="scientific-resources" href="#">Scientific Resources</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><button aria-label="Search preclinical capabilities" class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors p-space-xs rounded-lg hover:bg-surface-container-low" type="button"><span class="material-symbols-outlined text-[20px]">search</span><span class="hidden md:inline font-body-sm text-body-sm text-outline">Search capabilities...</span></button><a class="bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-caption px-space-lg py-space-sm rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" data-path="discuss-your-study" href="#"><span>Discuss Your Study</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION: Editorial Biotech Splice (Wave Life Sciences & Melior Fusion) -->
+<section class="relative w-full overflow-hidden bg-surface-bright pb-space-2xl">
+<!-- Ambient Precision Glows -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-48 w-[500px] h-[500px] rounded-full bg-primary-fixed-dim/30 blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1360px] mx-auto px-margin pt-space-xl">
+<!-- Eyebrow Tag -->
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-micro-label text-micro-label tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Preclinical CRO • Worcester, Massachusetts
+        </span>
+<span class="hidden md:inline font-mono-metric text-caption text-outline">| AAALAC Principles • In Vivo &amp; In Vitro</span>
+</div>
+<!-- Main Asymmetric Headline & Imagery Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Typography & Intent-Driven Interaction -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-on-surface tracking-tight leading-[1.08]">
+            Preclinical research <span class="text-primary italic font-serif">built around</span> your science.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Alpha Preclinical partners with biotechnology innovators, biopharma leaders, and academic pioneers to design, validate, and execute tailored preclinical <span class="text-on-surface font-semibold">in vivo</span> and <span class="text-on-surface font-semibold">in vitro</span> programs with scientific rigor, high-resolution optical imaging, and direct PhD study leadership.
+          </p>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm px-space-xl py-space-md rounded-lg flex items-center gap-space-sm transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5" href="#discuss-study">
+<span>Discuss Your Study</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-headline-sm text-body-md px-space-lg py-space-md rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" href="#capabilities">
+<span class="material-symbols-outlined text-[20px] text-secondary">biotech</span>
+<span>Explore Capabilities &amp; Models</span>
+</a>
+</div>
+<!-- Research Query Bar (Melior/Wave-inspired Interactive Fast-Finder) -->
+<div class="mt-space-md p-space-md bg-surface-container-lowest rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label text-outline uppercase tracking-wider">Fast Model Discovery</span>
+<span class="font-caption text-caption text-secondary font-medium">Over 150+ validated protocols</span>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low rounded-lg px-space-md py-space-sm">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" id="model-search-input" placeholder="Search disease models, e.g. IVIS bioluminescence, NASH/MASH, AAV biodistribution..." type="text"/>
+<button class="bg-primary text-on-primary text-caption font-headline-sm px-space-md py-1 rounded-DEFAULT hover:bg-primary-container transition-colors" type="button">Find</button>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="font-caption text-caption text-outline">Popular:</span>
+<button class="text-caption font-micro-label text-secondary hover:underline bg-surface-container px-2 py-0.5 rounded-DEFAULT" type="button">IVIS Optical Imaging</button>
+<button class="text-caption font-micro-label text-secondary hover:underline bg-surface-container px-2 py-0.5 rounded-DEFAULT" type="button">Gene Therapy AAV</button>
+<button class="text-caption font-micro-label text-secondary hover:underline bg-surface-container px-2 py-0.5 rounded-DEFAULT" type="button">Diet-Induced Obesity</button>
+<button class="text-caption font-micro-label text-secondary hover:underline bg-surface-container px-2 py-0.5 rounded-DEFAULT" type="button">PK/PD Clearance</button>
+<button class="text-caption font-micro-label text-secondary hover:underline bg-surface-container px-2 py-0.5 rounded-DEFAULT" type="button">Syngeneic CDX</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Geometric Asymmetric Biotech Visual Specimen -->
+<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Modern high-tech preclinical optical laboratory in Worcester Massachusetts featuring scientists in sterile cleanroom suits operating a PerkinElmer Spectrum IVIS optical imaging chamber, analyzing luminescence scans of cellular therapeutic biodistribution on high resolution monitors with blue and teal photon emission heatmaps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_fEE56lUcWtrbqJE-v_BM9mknt2EDYMUW6voUpEO7pMqSrD_ZvPFbqY2aCvAb6RdMvo8eE_JtuNDGFk0KlHuoGzAYHgM6ovdt8jHgaLKIloVzy-TkxAYi3nuBUMGzOP18HcbsMB90Kwa3Z42KcITV_v_dLN-5RXdUEfWNmiKtUWLxBsJhmvdGogo758agxeooKk5iandQu-VbzNvFjFCjjc0V-kRN5xw-cpVyczDnhHUhQGCxK84T4g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<!-- Overlaid Dynamic Scientific Data Pod -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-space-md rounded-lg shadow-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-micro-label text-micro-label text-primary font-bold tracking-widest uppercase">PerkinElmer Spectrum IVIS</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-micro-label text-[10px] uppercase font-bold">In Vivo Live Tracking</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Non-invasive, quantitative longitudinal bioluminescence &amp; deep-tissue fluorescence data acquisition.
+              </p>
+<div class="grid grid-cols-3 gap-2 pt-1">
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center">
+<span class="block font-mono-metric text-caption text-primary font-bold">1.2e8</span>
+<span class="block font-micro-label text-[10px] text-outline">photons/sec</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center">
+<span class="block font-mono-metric text-caption text-secondary font-bold">ΔT -48%</span>
+<span class="block font-micro-label text-[10px] text-outline">Cohort Time</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT text-center">
+<span class="block font-mono-metric text-caption text-tertiary font-bold">p &lt; 0.001</span>
+<span class="block font-micro-label text-[10px] text-outline">Statistical Conf.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Accent Tile Floating Off Grid -->
+<div class="hidden xl:flex absolute -bottom-8 -left-12 bg-primary text-on-primary p-space-md rounded-xl shadow-xl max-w-xs flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">science</span>
+<span class="font-headline-sm text-body-sm font-bold text-primary-fixed">Direct PhD Leadership</span>
+</div>
+<p class="font-caption text-caption text-primary-fixed-dim leading-snug">
+              Every protocol is stewarded by seasoned doctoral investigators with over two decades in translational pharmacology.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SCIENTIFIC TRUST & ACCELERATION STRIP -->
+<section class="w-full bg-surface-container-lowest py-space-xl shadow-sm">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-lg">
+<!-- Metric 1 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-mono-metric text-headline-lg lg:text-headline-xl text-primary font-bold tracking-tight">20+ Yrs</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Scientific Leadership</span>
+<span class="font-body-sm text-caption text-on-surface-variant">Decades directing complex preclinical study cohorts</span>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-mono-metric text-headline-lg lg:text-headline-xl text-secondary font-bold tracking-tight">100%</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Tailored Protocols</span>
+<span class="font-body-sm text-caption text-on-surface-variant">Customized in vivo &amp; in vitro endpoints, zero boilerplate</span>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-mono-metric text-headline-lg lg:text-headline-xl text-primary-container font-bold tracking-tight">24-48h</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">PhD Feedback SLA</span>
+<span class="font-body-sm text-caption text-on-surface-variant">Rapid study initiation and immediate protocol revisions</span>
+</div>
+<!-- Metric 4 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="font-mono-metric text-headline-lg lg:text-headline-xl text-on-surface font-bold tracking-tight">IVIS®</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">High-Res Imaging</span>
+<span class="font-body-sm text-caption text-on-surface-variant">Longitudinal deep-tissue bioluminescence &amp; fluorescence</span>
+</div>
+<!-- Metric 5 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg hover:bg-surface-container-low transition-colors col-span-2 md:col-span-1">
+<span class="font-mono-metric text-headline-lg lg:text-headline-xl text-primary font-bold tracking-tight">Worcester</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">MA Biotech Hub</span>
+<span class="font-body-sm text-caption text-on-surface-variant">Plantation St facility connected to Boston pharma ecosystem</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CORE CAPABILITIES (Built Around Your Research Program) -->
+<section class="w-full py-space-2xl bg-surface" id="capabilities">
+<div class="max-w-[1360px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-2xl gap-space-md">
+<div class="max-w-3xl flex flex-col gap-space-xs">
+<span class="font-micro-label text-micro-label text-primary uppercase font-bold tracking-widest">Preclinical Service Suite</span>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface tracking-tight">
+            Built around your specific research program.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            From proof-of-concept screening to IND-enabling studies, our Worcester facility delivers modular, high-fidelity in vivo and in vitro execution with unmatched analytical integrity.
+          </p>
+</div>
+<a class="inline-flex items-center gap-space-xs text-primary font-headline-sm text-body-md hover:text-primary-container transition-colors group" href="#discuss-study">
+<span>Request capability spec sheet</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Capability Cards Grid (6 Modules) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- 1. In Vivo Research -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">pets</span>
+</span>
+<span class="font-micro-label text-micro-label text-secondary px-2 py-1 bg-surface-container-low rounded-DEFAULT font-semibold">RODENT MODELS</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">In Vivo Research</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Comprehensive disease model induction, efficacy profiling, acute/chronic dosing regimens, and survival &amp; non-survival endpoint evaluations across mice and rats.
+              </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<span class="font-micro-label text-caption text-outline uppercase tracking-wider font-semibold">Core Endpoints</span>
+<ul class="text-body-sm text-on-surface-variant space-y-1">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Tumor volume &amp; caliper tracking</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Behavioral &amp; functional scoring</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Serial microsampling &amp; necropsy</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Customized Induction Protocols</span>
+<a class="text-primary group-hover:translate-x-1 transition-transform" href="#discuss-study">
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+</div>
+<!-- 2. PK/PD Studies -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">monitoring</span>
+</span>
+<span class="font-micro-label text-micro-label text-primary px-2 py-1 bg-surface-container-low rounded-DEFAULT font-semibold">PHARMACOLOGY</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">PK/PD Profiling</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Determine bioavailability, clearance kinetics, multi-compartment half-life, and direct tissue biodistribution to establish therapeutic index and optimal dose selection.
+              </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<span class="font-micro-label text-caption text-outline uppercase tracking-wider font-semibold">Key Capabilities</span>
+<ul class="text-body-sm text-on-surface-variant space-y-1">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Multi-route dosing (IV, IP, SC, PO, IT)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Target engagement biomarker linkage</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Plasma, serum, CSF &amp; tissue harvesting</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Non-Compartmental Analysis</span>
+<a class="text-primary group-hover:translate-x-1 transition-transform" href="#discuss-study">
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+</div>
+<!-- 3. IVIS Optical Imaging -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">filter_center_focus</span>
+</span>
+<span class="font-micro-label text-micro-label text-tertiary px-2 py-1 bg-tertiary-fixed rounded-DEFAULT font-semibold">FLAGSHIP PLATFORM</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">IVIS Optical Imaging</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                State-of-the-art PerkinElmer Spectrum IVIS optical platform enabling real-time, longitudinal tracking of cellular kinetics, deep-tissue targets, and gene vectors.
+              </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<span class="font-micro-label text-caption text-outline uppercase tracking-wider font-semibold">Imaging Modalities</span>
+<ul class="text-body-sm text-on-surface-variant space-y-1">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>High-sensitivity bioluminescence (Luciferase)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Multi-channel fluorescence imaging</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Sequential tumor metastasizing quantification</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Longitudinal Reduction in Cohort N</span>
+<a class="text-primary group-hover:translate-x-1 transition-transform" href="#discuss-study">
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+</div>
+<!-- 4. Surgical Services -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">medical_services</span>
+</span>
+<span class="font-micro-label text-micro-label text-secondary px-2 py-1 bg-surface-container-low rounded-DEFAULT font-semibold">MICROSURGERY</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Surgical Services</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Skilled surgical technicians performing complex rodent microsurgery, vascular cannulation, organ-specific implantations, and bespoke disease induction models.
+              </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<span class="font-micro-label text-caption text-outline uppercase tracking-wider font-semibold">Surgical Specializations</span>
+<ul class="text-body-sm text-on-surface-variant space-y-1">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Jugular / femoral vascular catheterization</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Orthotopic tumor grafting (pancreatic, brain)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Ischemia-reperfusion &amp; ligation models</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Isoflurane Regulated Suites</span>
+<a class="text-primary group-hover:translate-x-1 transition-transform" href="#discuss-study">
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+</div>
+<!-- 5. Colony Management -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</span>
+<span class="font-micro-label text-micro-label text-primary px-2 py-1 bg-surface-container-low rounded-DEFAULT font-semibold">VIVARIUM HOUSING</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Colony Management</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Dedicated vivarium management for rare, transgenic, and knock-out strains. Seamless cohort expansion, strict health surveillance, and synchronized breeding.
+              </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<span class="font-micro-label text-caption text-outline uppercase tracking-wider font-semibold">Colony Services</span>
+<ul class="text-body-sm text-on-surface-variant space-y-1">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>PCR genotyping &amp; ear-tag identification</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Dedicated quarantine &amp; SPF barrier housing</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Cohort age-matching &amp; study staging</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-caption text-caption text-outline">IACUC Oversight Certified</span>
+<a class="text-primary group-hover:translate-x-1 transition-transform" href="#discuss-study">
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+</div>
+<!-- 6. In Vitro Laboratory Services -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">biotech</span>
+</span>
+<span class="font-micro-label text-micro-label text-secondary px-2 py-1 bg-surface-container-low rounded-DEFAULT font-semibold">BIOANALYTICS</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">In Vitro Laboratory Services</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Correlate in vivo discoveries with robust cell-based assays, biomarker screening, cytokine multiplexing, histology, and high-throughput molecular diagnostics.
+              </p>
+</div>
+<div class="flex flex-col gap-1.5 pt-2">
+<span class="font-micro-label text-caption text-outline uppercase tracking-wider font-semibold">Analytical Assays</span>
+<ul class="text-body-sm text-on-surface-variant space-y-1">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Multi-color flow cytometry &amp; immunophenotyping</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>ELISA &amp; multiplex cytokine panels</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Tissue sectioning, H&amp;E, and custom IHC staining</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-caption text-caption text-outline">GLP-Trained Technicians</span>
+<a class="text-primary group-hover:translate-x-1 transition-transform" href="#discuss-study">
+<span class="material-symbols-outlined">east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- THERAPEUTIC EXPERTISE MATRIX (Interactive Disease Models) -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<span class="font-micro-label text-micro-label text-secondary uppercase font-bold tracking-widest">Disease Domain Expertise</span>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface">
+          Experience across complex, high-stakes disease areas.
+        </h2>
+<p class="font-body-lg text-body-md text-on-surface-variant max-w-3xl">
+          We combine validated preclinical models with specialized scientific acumen to give your therapy the highest probability of clinical translation.
+        </p>
+</div>
+<!-- Matrix Tabs & Cards Display -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Area 1: Gene Therapy & RNA -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-micro-label text-micro-label uppercase font-bold">AAV &amp; mRNA</span>
+<span class="font-mono-metric text-caption text-outline">T-1 to 4 wks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gene Therapy &amp; RNA Medicines</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Longitudinal tracking of AAV capsid biodistribution, lipid nanoparticle (LNP) organ tropism, and targeted messenger RNA expression across vital tissues.
+            </p>
+<div class="mt-2 bg-surface-container-low p-space-sm rounded-DEFAULT text-caption font-body-sm flex flex-col gap-1">
+<div class="flex justify-between text-outline font-micro-label"><span>Primary Readout</span><span class="text-on-surface font-mono-metric">Bioluminescent Expression</span></div>
+<div class="flex justify-between text-outline font-micro-label"><span>Target Tissues</span><span class="text-on-surface">Liver, CNS, Muscle, Retina</span></div>
+</div>
+</div>
+<a class="mt-space-md font-body-sm text-caption text-primary font-semibold flex items-center gap-1 hover:underline" href="#discuss-study">
+<span>Explore Gene Therapy Protocol</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Area 2: Autoimmune Disease -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-micro-label text-micro-label uppercase font-bold">Immunology</span>
+<span class="font-mono-metric text-caption text-outline">T-2 to 6 wks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Autoimmune &amp; Immune-Mediated</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Standardized EAE (multiple sclerosis models), collagen-induced arthritis (CIA), lupus nephritis, and dextran sodium sulfate (DSS) induced colitis.
+            </p>
+<div class="mt-2 bg-surface-container-low p-space-sm rounded-DEFAULT text-caption font-body-sm flex flex-col gap-1">
+<div class="flex justify-between text-outline font-micro-label"><span>Primary Readout</span><span class="text-on-surface font-mono-metric">Clinical Score &amp; Flow Cytometry</span></div>
+<div class="flex justify-between text-outline font-micro-label"><span>Assay Focus</span><span class="text-on-surface">T-cell Subsets &amp; Pro-inflammatory Cytokines</span></div>
+</div>
+</div>
+<a class="mt-space-md font-body-sm text-caption text-primary font-semibold flex items-center gap-1 hover:underline" href="#discuss-study">
+<span>Explore Autoimmune Models</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Area 3: Metabolic Diseases -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-micro-label text-micro-label uppercase font-bold">Endocrine</span>
+<span class="font-mono-metric text-caption text-outline">T-4 to 12 wks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Metabolic Diseases &amp; MASH</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Diet-induced obesity (DIO), non-alcoholic steatohepatitis (NASH/MASH), ob/ob, db/db, and STZ-induced diabetic nephropathy models with detailed lipid profiling.
+            </p>
+<div class="mt-2 bg-surface-container-low p-space-sm rounded-DEFAULT text-caption font-body-sm flex flex-col gap-1">
+<div class="flex justify-between text-outline font-micro-label"><span>Primary Readout</span><span class="text-on-surface font-mono-metric">IPGTT, Blood Chem, NAS Score</span></div>
+<div class="flex justify-between text-outline font-micro-label"><span>Specialization</span><span class="text-on-surface">Liver Triglycerides &amp; Fibrosis Stain</span></div>
+</div>
+</div>
+<a class="mt-space-md font-body-sm text-caption text-primary font-semibold flex items-center gap-1 hover:underline" href="#discuss-study">
+<span>Explore Metabolic Models</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Area 4: Inflammation & Fibrosis -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-micro-label text-micro-label uppercase font-bold">Pathology</span>
+<span class="font-mono-metric text-caption text-outline">T-3 to 6 wks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Inflammation &amp; Fibrosis Models</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Bleomycin-induced pulmonary fibrosis, CCl4 liver injury, renal interstitial fibrosis, and systemic sclerosis models evaluated by quantitative digital morphometry.
+            </p>
+<div class="mt-2 bg-surface-container-low p-space-sm rounded-DEFAULT text-caption font-body-sm flex flex-col gap-1">
+<div class="flex justify-between text-outline font-micro-label"><span>Primary Readout</span><span class="text-on-surface font-mono-metric">Sirius Red, Hydroxyproline &amp; IHC</span></div>
+<div class="flex justify-between text-outline font-micro-label"><span>Resolution</span><span class="text-on-surface">Digital Histopathology Scoring</span></div>
+</div>
+</div>
+<a class="mt-space-md font-body-sm text-caption text-primary font-semibold flex items-center gap-1 hover:underline" href="#discuss-study">
+<span>Explore Fibrosis Capabilities</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Area 5: Oncology / Tumor Models -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-micro-label text-micro-label uppercase font-bold">Immuno-Oncology</span>
+<span class="font-mono-metric text-caption text-outline">T-2 to 8 wks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tumor Models &amp; Immuno-Oncology</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Subcutaneous and orthotopic syngeneic models (4T1, CT26, MC38, B16-F10), cell-derived xenografts (CDX), and luciferase-tagged metastatic progression cohorts.
+            </p>
+<div class="mt-2 bg-surface-container-low p-space-sm rounded-DEFAULT text-caption font-body-sm flex flex-col gap-1">
+<div class="flex justify-between text-outline font-micro-label"><span>Primary Readout</span><span class="text-on-surface font-mono-metric">Optical IVIS &amp; T-cell Infiltration</span></div>
+<div class="flex justify-between text-outline font-micro-label"><span>Modality</span><span class="text-on-surface">Checkpoint Inhibitor Benchmark</span></div>
+</div>
+</div>
+<a class="mt-space-md font-body-sm text-caption text-primary font-semibold flex items-center gap-1 hover:underline" href="#discuss-study">
+<span>Explore Oncology Models</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Area 6: Multi-Compartment PK/PD -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-micro-label text-micro-label uppercase font-bold">Bioavailability</span>
+<span class="font-mono-metric text-caption text-outline">T-48h to 2 wks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Rapid PK/PD &amp; Biodistribution</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              High-throughput pharmacokinetic screen in naive mice and rats. Exacting multi-timepoint cannulated blood collection, tissue partitioning, and clearance rate mapping.
+            </p>
+<div class="mt-2 bg-surface-container-low p-space-sm rounded-DEFAULT text-caption font-body-sm flex flex-col gap-1">
+<div class="flex justify-between text-outline font-micro-label"><span>Primary Readout</span><span class="text-on-surface font-mono-metric">Cmax, AUC, T1/2, Vd, Cl</span></div>
+<div class="flex justify-between text-outline font-micro-label"><span>Turnaround</span><span class="text-on-surface">7-day Full Bioanalytical Package</span></div>
+</div>
+</div>
+<a class="mt-space-md font-body-sm text-caption text-primary font-semibold flex items-center gap-1 hover:underline" href="#discuss-study">
+<span>Explore PK/PD Protocol</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CUSTOM STUDY DESIGN WORKFLOW (Editorial 5-Stage Step Progression) -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl flex flex-col gap-space-xs">
+<span class="font-micro-label text-micro-label text-primary uppercase font-bold tracking-widest">Collaborative Execution Framework</span>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface">
+          Your program isn't off the shelf. Your study shouldn't be either.
+        </h2>
+<p class="font-body-lg text-body-md text-on-surface-variant">
+          We operate as an agile scientific extension of your laboratory, co-designing protocols to satisfy your target milestone timelines.
+        </p>
+</div>
+<!-- 5-Stage Track -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+<!-- Stage 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-mono-metric text-caption font-bold flex items-center justify-center">01</span>
+<span class="font-micro-label text-[10px] text-outline uppercase font-semibold">Discovery</span>
+</div>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Define &amp; Hypothesize</h3>
+<p class="font-body-sm text-caption text-on-surface-variant leading-relaxed">
+            Collaborative alignment on compound mechanism, therapeutic target, animal strain relevance, and clinical translation goals.
+          </p>
+<div class="mt-auto pt-2 text-micro-label text-secondary font-mono-metric">Direct PhD Consultation</div>
+</div>
+<!-- Stage 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary font-mono-metric text-caption font-bold flex items-center justify-center">02</span>
+<span class="font-micro-label text-[10px] text-outline uppercase font-semibold">Protocol</span>
+</div>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Design &amp; Powering</h3>
+<p class="font-body-sm text-caption text-on-surface-variant leading-relaxed">
+            Statistical power calculations, cohort sizing, dosing route matrix, control selection, and quantitative endpoint mapping.
+          </p>
+<div class="mt-auto pt-2 text-micro-label text-secondary font-mono-metric">IACUC Fast-Track Approval</div>
+</div>
+<!-- Stage 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-mono-metric text-caption font-bold flex items-center justify-center">03</span>
+<span class="font-micro-label text-[10px] text-outline uppercase font-semibold">In Vivo</span>
+</div>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Execute &amp; Monitor</h3>
+<p class="font-body-sm text-caption text-on-surface-variant leading-relaxed">
+            Precision in vivo dosing and live optical imaging in our Worcester facility with real-time health checks and weekly client updates.
+          </p>
+<div class="mt-auto pt-2 text-micro-label text-secondary font-mono-metric">Real-Time Data Access</div>
+</div>
+<!-- Stage 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-surface-tint text-on-primary font-mono-metric text-caption font-bold flex items-center justify-center">04</span>
+<span class="font-micro-label text-[10px] text-outline uppercase font-semibold">Quantification</span>
+</div>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Analyze &amp; Quantify</h3>
+<p class="font-body-sm text-caption text-on-surface-variant leading-relaxed">
+            High-sensitivity IVIS luminescence quantification, biomarker ELISA, histology, and parametric/non-parametric statistical rigor.
+          </p>
+<div class="mt-auto pt-2 text-micro-label text-secondary font-mono-metric">Blinded Image Scoring</div>
+</div>
+<!-- Stage 5 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-on-secondary-container text-on-secondary font-mono-metric text-caption font-bold flex items-center justify-center">05</span>
+<span class="font-micro-label text-[10px] text-outline uppercase font-semibold">Milestone</span>
+</div>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Advance to IND</h3>
+<p class="font-body-sm text-caption text-on-surface-variant leading-relaxed">
+            Delivery of publication-grade study report, audited raw data repositories, graph-ready figures, and debriefing with our PhD team.
+          </p>
+<div class="mt-auto pt-2 text-micro-label text-secondary font-mono-metric">Regulatory Data Package</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ADVANCED LABORATORY INSTRUMENTATION SHOWCASE -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Instrument Specifications -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-micro-label text-micro-label text-secondary uppercase font-bold tracking-widest">Laboratory Infrastructure</span>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface">
+            Cutting-edge optical imaging &amp; bioanalytical suites in Worcester.
+          </h2>
+<p class="font-body-lg text-body-md text-on-surface-variant leading-relaxed">
+            Our Massachusetts laboratory houses advanced optical, surgical, and cellular instrumentation operated by career technicians dedicated exclusively to study reliability.
+          </p>
+<div class="space-y-space-sm pt-space-xs">
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">center_focus_strong</span>
+<div>
+<h4 class="font-headline-sm text-body-md font-semibold text-on-surface">PerkinElmer Spectrum IVIS Optical Imaging</h4>
+<p class="font-body-sm text-caption text-on-surface-variant mt-1">High-quantum-efficiency cooled CCD sensor for micro-photon detection in bioluminescent gene therapies and near-infrared fluorescent probes.</p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5">colorize</span>
+<div>
+<h4 class="font-headline-sm text-body-md font-semibold text-on-surface">Micro-Surgical &amp; Cannulation Suites</h4>
+<p class="font-body-sm text-caption text-on-surface-variant mt-1">Heated surgical boards, Leica stereomicroscopes, continuous isoflurane vaporizers, and automated blood collection units.</p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">flowsheet</span>
+<div>
+<h4 class="font-headline-sm text-body-md font-semibold text-on-surface">Multi-Color Flow Cytometer &amp; Automated Hematology</h4>
+<p class="font-body-sm text-caption text-on-surface-variant mt-1">Simultaneous 10-marker immune panel analysis, Complete Blood Count (CBC) with 5-part differential, and serum biochemistry analyzer.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Laboratory Visual Collage -->
+<div class="lg:col-span-6 grid grid-cols-2 gap-space-md">
+<div class="rounded-xl overflow-hidden shadow-lg h-72 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Modern preclinical laboratory technician in lab coat and nitrile gloves pipetting bioanalytical samples into 96-well plates next to an automated multi-plate reader with digital readouts in a clean research facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFPMpBXoNxrMVwh2qHYYdfByYjUu1o2_EHyX3BKJlqJDeMgV3D1XuSo4ufw8hnZkZnVh-GX0djwC29fBHP0AWrSH5VIzTzB1wjsHVjLnYeHR4WPGBEaDhBXjmIxUrr6KHU7qCVnW4R0Ia7UvyjyxeTeFfGnIqbfpfs6rxrDb98J_tJbefBrSsc_ziUfjTHcMj7ZsQ76QBSjVUjl1x8DBNPtuS9ZN2xpUZ9q7Ye3HpibJ5W--VSP35y9Q"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-72 bg-surface-container-highest mt-6">
+<img class="w-full h-full object-cover" data-alt="Close up view of scientific optical imaging screen displaying luminescence intensity map with rainbow heatmap of cellular bioluminescence in mouse model against black background with precise analytical calipers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4KNNo20F5GreDoyCUiorNUA32BaXSOzUxfUtP0uyGvJNMOZEW2gb2Ec_veCHUqy75VA670BNBEtC-zwECeQBk72x-LktzywehQLCnCIJsGgSclxCjrSaLhLH01h0oMQVW2mxYuiUyaX0Xvm7eq2XzPTEQN8lpbchjls7vN0oKw7cMGjUHDGB62m59lRJbyjiPpNX6oyhm9s4V1SbdzfjQtgb3QvLZ_cDCASma20Zq4BCXUh1em6Wn3Q"/>
+</div>
+<div class="col-span-2 rounded-xl overflow-hidden shadow-lg h-48 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Wide angle view of clean vivarium holding suites with pathogen-free ventilated rodent rack systems and computerized environmental humidity and temperature monitoring consoles in Worcester Massachusetts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBybGTjMIJSu_ygGRPuLvccbF7wQqw9DUOJ-8Ss5zrU05sD1ogMmMgYVbRq022AiWPBwCYn80UAxkKkmt2NbVBxrXqFqVhu8j2kqaGlKYt4D1p2wNO2OLUkkm8-_wQO8RNmYBU2OrcE7u7T7aLDLG2bmh3Ji9NhD-TjC5gdMRHF0_3k85KGYY97jlgWyxs2wNW72AdUyJGZjMsf6P3HlIUMdlniu7wfCpn9f_IXPoHPB1ccOuK5VU5Ug"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED CASE STUDY: Peer-Level Rigor -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="p-space-xl lg:p-space-2xl bg-surface-container-lowest rounded-2xl shadow-lg border-0">
+<div class="flex flex-col lg:flex-row gap-space-xl items-start">
+<div class="lg:w-1/3 flex flex-col gap-space-md">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-micro-label text-micro-label uppercase font-bold w-fit">Validated Case Study</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+              Longitudinal IVIS Bioluminescence Monitoring of Gene Therapy Transduction
+            </h3>
+<p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">
+              An emerging Boston-area gene therapy biotech required sensitive in vivo validation of a novel AAV9 capsid variant targeting systemic skeletal muscle while avoiding off-target hepatic accumulation.
+            </p>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-2">
+<span class="font-micro-label text-caption text-primary font-bold uppercase">Study Architecture</span>
+<span class="font-body-sm text-caption text-on-surface"><strong>Model:</strong> C57BL/6J (n = 32 cohorts)</span>
+<span class="font-body-sm text-caption text-on-surface"><strong>Vector:</strong> Luciferase-tagged AAV9 variant</span>
+<span class="font-body-sm text-caption text-on-surface"><strong>Timeline:</strong> Day 0 to Day 60 longitudinal</span>
+</div>
+</div>
+<div class="lg:w-2/3 flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col">
+<span class="font-mono-metric text-headline-md text-primary font-bold">3.8x</span>
+<span class="font-headline-sm text-caption text-on-surface font-semibold mt-1">Muscle Tropism vs. Control</span>
+<span class="font-body-sm text-caption text-on-surface-variant mt-1">Statistically validated target tissue accumulation</span>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col">
+<span class="font-mono-metric text-headline-md text-secondary font-bold">-72%</span>
+<span class="font-headline-sm text-caption text-on-surface font-semibold mt-1">Off-Target Liver Burden</span>
+<span class="font-body-sm text-caption text-on-surface-variant mt-1">Demonstrated safety profile improvement</span>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col">
+<span class="font-mono-metric text-headline-md text-on-surface font-bold">50%</span>
+<span class="font-headline-sm text-caption text-on-surface font-semibold mt-1">Reduction in Cohort Size</span>
+<span class="font-body-sm text-caption text-on-surface-variant mt-1">Non-invasive IVIS eliminated serial sacrifice needs</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm">
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">The Alpha Preclinical Difference</h4>
+<p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">
+                Rather than relying on invasive single-time-point histology, our study director designed an IVIS bioluminescent kinetic profile imaging animals at Days 3, 7, 14, 28, and 60. The client received calibrated photons/second/cm² emission figures within 24 hours of each session, accelerating their Series A milestone presentation by 3 months.
+              </p>
+<div class="flex items-center gap-space-md pt-2">
+<span class="font-micro-label text-caption text-secondary font-mono-metric">P &lt; 0.0001 (Two-way ANOVA)</span>
+<span class="text-outline-variant">•</span>
+<a class="font-caption text-caption text-primary font-bold hover:underline" href="#discuss-study">Discuss Similar Study Design →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY ALPHA: 4 Scientific Pillars -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl flex flex-col gap-space-xs">
+<span class="font-micro-label text-micro-label text-primary uppercase font-bold tracking-widest">Why Sponsor With Us</span>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface">
+          Scientific partnership reimagined.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<span class="material-symbols-outlined text-[32px] text-primary">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Scientific Depth</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Collaborate directly with seasoned PhD toxicologists and pharmacologists rather than junior account managers.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<span class="material-symbols-outlined text-[32px] text-secondary">verified_user</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Uncompromising Rigor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Full compliance with AAALAC principles, strict blinding capabilities, and meticulous data provenance protocols.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<span class="material-symbols-outlined text-[32px] text-primary">bolt</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Agile Responsiveness</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Rapid protocol iterations, swift cohort expansions, and 24-48 hour turnaround on technical amendments.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<span class="material-symbols-outlined text-[32px] text-secondary">handshake</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">True Collaboration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            We operate as a direct extension of your internal pipeline, providing transparent raw data and ongoing scientific council.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIAL & ENDORSEMENT QUOTE (Wave/Melior Style) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-[1100px] mx-auto px-margin">
+<div class="bg-gradient-to-r from-primary to-primary-container text-on-primary p-space-xl lg:p-space-2xl rounded-2xl shadow-xl relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-10 text-on-primary">
+<span class="material-symbols-outlined text-[200px]">format_quote</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<span class="material-symbols-outlined text-secondary-fixed text-[36px]">format_quote</span>
+<p class="font-display-hero-mobile lg:font-body-lg text-headline-md lg:text-headline-lg font-light leading-snug max-w-3xl">
+            “Alpha Preclinical provided our oncology pipeline with rapid, immaculate IVIS optical imaging data. Their ability to customize dosing cohorts on short notice and discuss pharmacology directly with their senior scientists saved our program nearly four months.”
+          </p>
+<div class="flex items-center gap-space-md pt-space-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest text-primary font-headline-sm font-bold flex items-center justify-center">
+              VP
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-primary">VP of Translational Pharmacology</span>
+<span class="font-caption text-caption text-primary-fixed-dim">Clinical-Stage Massachusetts Biotechnology Company</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SCIENTIFIC PUBLICATIONS & RECOGNITION STRIP -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md pb-space-lg">
+<div>
+<span class="font-micro-label text-micro-label text-outline uppercase font-semibold">Scientific Dissemination</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Presentations &amp; Publications</h3>
+</div>
+<a class="font-body-sm text-caption text-primary font-bold hover:underline" href="#discuss-study">Request Full Publication Bibliography →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="font-micro-label text-[10px] text-secondary font-mono-metric uppercase">AACR Annual Meeting</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface">Quantitative In Vivo Bioluminescent Tracking of Solid Tumor Clearance</h4>
+<p class="font-body-sm text-caption text-on-surface-variant">Comparative evaluation of syngeneic models under novel bispecific T-cell engager regimens.</p>
+</div>
+<span class="font-caption text-[11px] text-outline pt-2">Poster #2481 • Translational Oncology</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="font-micro-label text-[10px] text-secondary font-mono-metric uppercase">Society of Toxicology (SOT)</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface">Multi-Organ Pharmacokinetic Profiling of Lipid Nanoparticle Formulations</h4>
+<p class="font-body-sm text-caption text-on-surface-variant">High-frequency serial sampling methodologies across rat and murine strains.</p>
+</div>
+<span class="font-caption text-[11px] text-outline pt-2">Abstract #1109 • Preclinical Safety</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="font-micro-label text-[10px] text-secondary font-mono-metric uppercase">ASGCT Symposium</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface">AAV Capsid Tropism Optimization via Long-Term Fluorescence Imaging</h4>
+<p class="font-body-sm text-caption text-on-surface-variant">Eliminating inter-animal variability through repeated deep-tissue optical measurement.</p>
+</div>
+<span class="font-caption text-[11px] text-outline pt-2">Oral Presentation • Vector Biodistribution</span>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE STUDY INQUIRY MODULE (Discuss Your Study) -->
+<section class="w-full py-space-2xl bg-surface" id="discuss-study">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Consultation Value & Facility Credentials -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-micro-label text-micro-label text-primary uppercase font-bold tracking-widest">Confidential Preclinical Intake</span>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface">
+              Discuss your upcoming study with a PhD Study Director.
+            </h2>
+<p class="font-body-lg text-body-md text-on-surface-variant leading-relaxed">
+              We respond to all project inquiries within 24 business hours with direct scientific feedback, preliminary protocol considerations, and timeline feasibility.
+            </p>
+</div>
+<div class="space-y-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock</span>
+<div>
+<span class="font-headline-sm text-body-sm font-bold block">Strict Mutual NDA Assurance</span>
+<span class="font-body-sm text-caption text-on-surface-variant">All shared molecular targets and protocols remain confidential.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[24px]">schedule</span>
+<div>
+<span class="font-headline-sm text-body-sm font-bold block">Rapid Study Staging</span>
+<span class="font-body-sm text-caption text-on-surface-variant">Active colonies and dedicated imaging suites reduce startup lag.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[24px]">pin_drop</span>
+<div>
+<span class="font-headline-sm text-body-sm font-bold block">Massachusetts Life Sciences Corridor</span>
+<span class="font-body-sm text-caption text-on-surface-variant">722 Plantation Street, Worcester, MA 01605</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-high rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-[10px] text-outline uppercase">Direct Scientific Line</span>
+<span class="font-mono-metric text-caption text-primary font-bold">inquiries@alphapreclinical.com</span>
+</div>
+<a class="px-space-md py-1.5 bg-primary text-on-primary font-headline-sm text-caption rounded-DEFAULT hover:bg-primary-container transition-colors" href="mailto:inquiries@alphapreclinical.com">
+              Email Team
+            </a>
+</div>
+</div>
+<!-- Right: Interactive Preclinical Intake Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-xl rounded-2xl shadow-lg">
+<form class="flex flex-col gap-space-md" id="study-inquiry-form" onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.classList.add('hidden');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="contact-name">Investigator Name *</label>
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="contact-name" placeholder="e.g. Dr. Sarah Jenkins" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="contact-email">Corporate / Institutional Email *</label>
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="contact-email" placeholder="name@biopharma.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="contact-org">Company / Institution *</label>
+<input class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="contact-org" placeholder="e.g. Cambridge Therapeutics" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="therapeutic-area">Primary Therapeutic Area *</label>
+<select class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="therapeutic-area" required="">
+<option disabled="" selected="" value="">Select disease domain...</option>
+<option value="gene-therapy">Gene Therapy / RNA / LNP</option>
+<option value="oncology">Oncology / Immuno-Oncology</option>
+<option value="metabolic">Metabolic / NASH / Obesity</option>
+<option value="autoimmune">Autoimmune &amp; Inflammation</option>
+<option value="fibrosis">Fibrosis (Pulmonary / Liver / Renal)</option>
+<option value="pkpd">Dedicated PK/PD Screen</option>
+<option value="custom">Other / Custom In Vivo</option>
+</select>
+</div>
+</div>
+<!-- Checkbox Services Required -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold">Required Service Modalities (Select all that apply)</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+<label class="flex items-center gap-2 p-2 bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 text-primary rounded" name="services" type="checkbox" value="ivis"/>
+<span class="font-body-sm text-caption text-on-surface">IVIS Optical Imaging</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 text-primary rounded" name="services" type="checkbox" value="pkpd"/>
+<span class="font-body-sm text-caption text-on-surface">PK/PD Sampling</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 text-primary rounded" name="services" type="checkbox" value="surgical"/>
+<span class="font-body-sm text-caption text-on-surface">Surgical Models</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 text-primary rounded" name="services" type="checkbox" value="colony"/>
+<span class="font-body-sm text-caption text-on-surface">Colony Breeding</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 text-primary rounded" name="services" type="checkbox" value="invitro"/>
+<span class="font-body-sm text-caption text-on-surface">In Vitro / ELISA / Flow</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-low rounded-DEFAULT cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 text-primary rounded" name="services" type="checkbox" value="histology"/>
+<span class="font-body-sm text-caption text-on-surface">Histopathology / IHC</span>
+</label>
+</div>
+</div>
+<!-- Program Stage & Expected Timeline -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="program-stage">Research Stage</label>
+<select class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="program-stage">
+<option value="early-discovery">Target Feasibility &amp; Discovery</option>
+<option value="lead-opt">Lead Optimization</option>
+<option value="preclinical-val">Preclinical Candidate Validation</option>
+<option value="ind-enabling">IND-Enabling Preparation</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="target-date">Desired Study Initiation</label>
+<select class="w-full h-11 px-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="target-date">
+<option value="immediate">Immediate (&lt; 2 weeks)</option>
+<option value="1-month">Within 30 Days</option>
+<option value="quarter">Next Quarter (Q2/Q3)</option>
+<option value="exploratory">Informational / Budgetary</option>
+</select>
+</div>
+</div>
+<!-- Notes -->
+<div class="flex flex-col gap-1">
+<label class="font-headline-sm text-caption text-on-surface font-semibold" for="study-brief">Study Scope &amp; Hypothesis Brief</label>
+<textarea class="w-full p-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="study-brief" placeholder="Briefly describe target animal model, dosing frequency, preferred readouts, or specific questions..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm py-space-md rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-md mt-2" type="submit">
+<span>Submit Study Inquiry for PhD Review</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<span class="font-caption text-[11px] text-outline text-center">Responses issued within 24 business hours under strict mutual confidentiality.</span>
+</form>
+<!-- Success State -->
+<div class="hidden flex flex-col items-center justify-center py-space-xl text-center gap-space-md" id="form-success">
+<span class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[36px]">check</span>
+</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-lg text-headline-md text-on-surface">Study Brief Received</h3>
+<p class="font-body-md text-body-sm text-on-surface-variant max-w-md">
+                Thank you for contacting Alpha Preclinical. A PhD Study Director has been notified and will review your parameters to deliver initial protocol guidance within 24 business hours.
+              </p>
+</div>
+<button class="text-caption font-headline-sm text-primary hover:underline" onclick="document.getElementById('study-inquiry-form').classList.remove('hidden'); document.getElementById('form-success').classList.add('hidden');" type="button">
+              Submit another inquiry
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WORCESTER FACILITY & LOCATION ANCHOR -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-[1360px] mx-auto px-margin">
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<span class="w-14 h-14 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">location_on</span>
+</span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-outline uppercase font-semibold">Central Massachusetts Life Sciences Cluster</span>
+<h3 class="font-headline-md text-headline-sm font-bold text-on-surface">Alpha Preclinical LLC • 722 Plantation Street, Worcester, MA 01605</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Strategically situated within Massachusetts' biotech corridor, minutes from UMass Chan Medical School and 45 minutes from Boston/Cambridge innovation hubs.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<a class="bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-caption px-space-md py-space-sm rounded-lg flex items-center gap-1 transition-colors" href="https://maps.google.com/?q=722+Plantation+Street,+Worcester,+MA+01605" rel="noopener noreferrer" target="_blank">
+<span>Get Directions</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+<a class="bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-caption px-space-md py-space-sm rounded-lg flex items-center gap-1 transition-colors" href="#discuss-study">
+<span>Schedule Facility Tour</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low"><div class="max-w-[1360px] mx-auto px-margin pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary font-bold">ALPHA PRECLINICAL</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Accelerating translational drug discovery through customized preclinical models, rigorous PK/PD, and advanced optical imaging.</p><div class="flex flex-col gap-space-xs mt-space-sm"><span class="font-micro-label text-micro-label text-outline uppercase tracking-wider">FACILITY &amp; HEADQUARTERS</span><p class="font-body-sm text-body-sm text-on-surface">722 Plantation Street<br/>Worcester, MA 01605<br/><span class="text-secondary font-medium">Massachusetts Biotech Corridor</span></p></div></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-micro-label text-micro-label text-primary font-bold uppercase tracking-wider">CAPABILITIES</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="in-vivo-research" href="#">In Vivo Models</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="ivis-optical-imaging" href="#">IVIS Optical Imaging</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="pk-pd-studies" href="#">PK/PD Profiling</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="surgical-services" href="#">Surgical Models</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="colony-management" href="#">Colony Management</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="in-vitro-laboratory-services" href="#">In Vitro Assays</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-micro-label text-micro-label text-primary font-bold uppercase tracking-wider">DISEASE EXPERTISE</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="oncology-tumor-models" href="#">Oncology</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="metabolic-disease" href="#">Metabolic Diseases</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="gene-therapy-rna" href="#">Gene Therapy &amp; RNA</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="autoimmune-disease" href="#">Autoimmune &amp; Inflam.</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"><a data-path="inflammation-fibrosis" href="#">Fibrosis Models</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-micro-label text-micro-label text-primary font-bold uppercase tracking-wider">STANDARDS &amp; RIGOR</span><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">verified</span><span class="font-body-sm text-body-sm text-on-surface">AAALAC Principles</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">verified</span><span class="font-body-sm text-body-sm text-on-surface">OLAW Compliant</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">verified</span><span class="font-body-sm text-body-sm text-on-surface">IACUC Overseen</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">verified</span><span class="font-body-sm text-body-sm text-on-surface">High-throughput QA</span></div></div></div><div class="lg:col-span-2 flex flex-col gap-space-md"><span class="font-micro-label text-micro-label text-primary font-bold uppercase tracking-wider">DIRECT INQUIRY</span><div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><span class="font-caption text-caption text-secondary font-semibold">PhD Direct Consult</span><p class="font-body-sm text-body-sm text-on-surface-variant">Response within 24 business hours from a PhD scientist.</p><a class="font-body-sm text-body-sm text-primary font-medium hover:underline mt-space-xs" href="mailto:inquiries@alphapreclinical.com">inquiries@alphapreclinical.com</a><span class="font-body-sm text-body-sm text-on-surface-variant">+1 508-856-XXXX</span></div></div></div></div><div class="w-full bg-surface-container py-space-md"><div class="max-w-[1360px] mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="font-caption text-caption text-on-surface-variant">© 2025 Alpha Preclinical LLC. All rights reserved. Worcester, Massachusetts.</div><div class="flex flex-wrap items-center gap-space-md"><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="text-outline-variant">•</span><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><span class="text-outline-variant">•</span><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" data-path="site-architecture" href="#">Site Architecture</a><span class="text-outline-variant">•</span><span class="font-caption text-caption text-on-surface-variant font-medium">WCAG 2.2 AA Compliant</span></div></div></div></footer></body></html>
